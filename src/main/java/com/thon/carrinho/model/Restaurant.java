@@ -18,12 +18,12 @@ import java.util.List;
 
 public class Restaurant {
   @Id //indicando que o id vai ser o primaryKey
-  @GeneratedValue(strategy = GenerationType.AUTO)  //gerando os IDs auto incrementados
+  @GeneratedValue(strategy = GenerationType.AUTO)  //gerando os IDs auto-incrementados
   private Long id;
   private String name;
 
   @OneToMany(cascade = CascadeType.ALL)
-  private List<Product> cardapio;
+  private List<Product> menu;
 
   @Embedded
   private Address address;

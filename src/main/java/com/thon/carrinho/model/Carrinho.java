@@ -34,7 +34,7 @@ public class Carrinho {
   private List<Item> items;
   private Double total;
 
-  @Embedded
+  @Enumerated
   private PaymentForm paymentForm;
   private boolean closed;
 
