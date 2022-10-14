@@ -1,4 +1,10 @@
 package com.thon.carrinho.repository;
 
-public interface ClientRepoditory {
+
+import com.thon.carrinho.model.Client;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface ClientRepoditory extends JpaRepository<Client, Long> {
 }
