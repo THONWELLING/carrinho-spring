@@ -12,6 +12,7 @@ import com.thon.carrinho.service.CarrinhoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -63,6 +64,19 @@ public class CarrinhoServiceImpl implements CarrinhoService {
         throw new RuntimeException("Não é possível adicionar itens de restaurantes diferentes.");
       }
     }
+
+    List<Double> itemsValues = new ArrayList<>();
+    for (Item carrinhoItem : carrinhoItems) {
+      double totalItemValue =
+        carrinhoItem.getProduct().getUnityValue() * carrinhoItem.getQuantity();
+      itemsValues.add(totalItemValue);
+    }
+
+    double totalValueCarrinho = itemsValues.stream()
+            .mapToDouble(totalUnityItemValue -> totalUnityItemValue)
+            .sum();
+
+    carrinho.setTotal(totalValueCarrinho);
     carrinhoRepository.save(carrinho);
     return itemToAdd;
   }
