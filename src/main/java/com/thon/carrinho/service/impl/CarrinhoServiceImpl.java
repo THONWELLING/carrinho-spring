@@ -64,7 +64,7 @@ public class CarrinhoServiceImpl implements CarrinhoService {
       }
     }
     carrinhoRepository.save(carrinho);
-    return itemRepository.save(itemToAdd);
+    return itemToAdd;
   }
 
   @Override
