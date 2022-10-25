@@ -14,7 +14,7 @@ import javax.persistence.*;
 @Builder
 @Data
 @Entity
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", })
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @NoArgsConstructor
 public class Product {
   @Id

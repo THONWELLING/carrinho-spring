@@ -3,7 +3,6 @@ package com.thon.carrinho.service.impl;
 import com.thon.carrinho.enumeration.PaymentForm;
 import com.thon.carrinho.model.Carrinho;
 import com.thon.carrinho.model.Item;
-import com.thon.carrinho.model.Product;
 import com.thon.carrinho.model.Restaurant;
 import com.thon.carrinho.repository.CarrinhoRepository;
 import com.thon.carrinho.repository.ItemRepository;
@@ -32,7 +31,7 @@ public class CarrinhoServiceImpl implements CarrinhoService {
       throw new RuntimeException("Carrinho está fechado.");
     }
 
-    //Criar um item
+    //Criar um iten
     Item itemToAdd = Item.builder()
         .quantity(itemDto.getQuantity())
         .carrinho(carrinho)
@@ -83,14 +82,8 @@ public class CarrinhoServiceImpl implements CarrinhoService {
       throw new RuntimeException("Inclua itens no carrinho!!");
     }
     //verificando a forma de pagamento
-    PaymentForm paymentForm = carrinho.getPaymentForm();
-    switch (paymentFormNumber) {
-      case 0 -> carrinho.setPaymentForm(PaymentForm.MONEY);
-      case 1 -> carrinho.setPaymentForm(PaymentForm.DEBIT_CARD);
-      case 2 -> carrinho.setPaymentForm(PaymentForm.PIX);
-      default -> carrinho.setPaymentForm(PaymentForm.CREDIT_CARD);
-    }
-
+    PaymentForm paymentForm =
+      paymentFormNumber == 0 ? PaymentForm.CARD : PaymentForm.PIX;
 
     carrinho.setPaymentForm(paymentForm);
     carrinho.setClosed(true);

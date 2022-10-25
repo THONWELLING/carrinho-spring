@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Builder  // um padrão do design patters que vai nos ajudar na hora de criar o objeto
 @Data  //(Lombok) Criando todos os getters e setters além disso para ter o equals e o hashCode para fazer comparações
 @Entity  //indicando que essa classe será uma tabela no banco de dados
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", })
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @NoArgsConstructor  //(Lombok) Criando um contrutor sem atributos
 
 public class Client {
