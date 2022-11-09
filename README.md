@@ -86,7 +86,7 @@ No Terminal/Console:
 <h3>Autor</h3>
 
 <a href="https://www.linkedin.com/in/wellington-sousa-6494a6179/">
- <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/81602215?s…00&u=246f5742f1f6f35ed1cc66e9b4392b6ccf19ee2a&v=4" width="100px;" alt=""/>
+ <img style="border-radius: 50%" src="https://avatars.githubusercontent.com/u/81602215?s…00&u=246f5742f1f6f35ed1cc66e9b4392b6ccf19ee2a&v=4" width="100px;" alt=""/>
  <br />
  <sub><b>ThonWelling</b></sub></a>
 

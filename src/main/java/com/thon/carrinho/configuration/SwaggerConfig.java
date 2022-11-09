@@ -19,8 +19,8 @@ public class SwaggerConfig {
   }
   private ApiInfo getInfo() {
     return new ApiInfoBuilder()
-        .title("Sacola API")
-        .description("Sacola API para Servir uma Aplicação de Delivery")
+        .title("Carrinho-spring")
+        .description("API de carrinho de compras simples para Servir uma Aplicação de Delivery")
         .build();
   }
 }
