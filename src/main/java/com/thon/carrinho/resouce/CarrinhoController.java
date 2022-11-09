@@ -5,9 +5,11 @@ import com.thon.carrinho.model.Carrinho;
 import com.thon.carrinho.model.Item;
 import com.thon.carrinho.resouce.dto.ItemDto;
 import com.thon.carrinho.service.CarrinhoService;
+import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+@Api(value = "/ifood/carrinho")
 @RestController
 @RequestMapping("/ifood/carrinho")
 @RequiredArgsConstructor
